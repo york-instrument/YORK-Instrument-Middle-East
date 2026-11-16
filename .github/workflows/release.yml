@@ -40,6 +40,8 @@ jobs:
 
   npm:
     needs: test
+    # Turned on by setting the repository variable NPM_ENABLED=true after the first manual npm publish.
+    if: vars.NPM_ENABLED == 'true'
     runs-on: ubuntu-latest
     permissions:
       id-token: write
