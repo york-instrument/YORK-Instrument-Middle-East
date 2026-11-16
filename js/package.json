@@ -10,6 +10,6 @@
   "keywords": ["dew point", "frost point", "ppmv", "moisture", "compressed air", "ISO 8573-1", "pressure dew point", "hygrometer"],
   "author": "YORK Instrument - Middle East <dubai@yorkinstrument.com> (https://www.yorkinstrument.ae/)",
   "homepage": "https://www.yorkinstrument.ae/tools/dew-point-calculator/",
-  "repository": { "type": "git", "url": "git+https://github.com/JasonLee9987/YORK-Instrument-Middle-East.git", "directory": "js" },
+  "repository": { "type": "git", "url": "git+https://github.com/york-instrument/YORK-Instrument-Middle-East.git", "directory": "js" },
   "license": "MIT"
 }

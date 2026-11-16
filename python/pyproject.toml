@@ -21,7 +21,7 @@ classifiers = [
 [project.urls]
 Homepage = "https://www.yorkinstrument.ae/tools/dew-point-calculator/"
 Documentation = "https://www.yorkinstrument.ae/guides/dew-point-to-ppm/"
-Source = "https://github.com/JasonLee9987/YORK-Instrument-Middle-East"
+Source = "https://github.com/york-instrument/YORK-Instrument-Middle-East"
 
 [tool.setuptools.packages.find]
 where = ["src"]

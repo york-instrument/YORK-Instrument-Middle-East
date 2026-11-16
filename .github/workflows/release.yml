@@ -1,0 +1,56 @@
+# Publishes york-dewpoint to PyPI and npm when a version tag (v0.1.0, v0.2.0, ...) is pushed.
+# Uses trusted publishing (OIDC): no API tokens are stored in this repository.
+# PyPI: add a trusted publisher for project "york-dewpoint", owner "york-instrument",
+#       repository "YORK-Instrument-Middle-East", workflow "release.yml".
+# npm:  after the first manual publish, link the package to this repository and workflow
+#       under the package's Settings -> Trusted publishing.
+
+name: release
+
+on:
+  push:
+    tags: ["v*"]
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    uses: ./.github/workflows/test.yml
+
+  pypi:
+    needs: test
+    runs-on: ubuntu-latest
+    permissions:
+      id-token: write
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Build
+        working-directory: python
+        run: |
+          python -m pip install --upgrade build
+          python -m build
+      - name: Publish to PyPI
+        uses: pypa/gh-action-pypi-publish@release/v1
+        with:
+          packages-dir: python/dist/
+
+  npm:
+    needs: test
+    runs-on: ubuntu-latest
+    permissions:
+      id-token: write
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          registry-url: https://registry.npmjs.org
+      - name: Publish to npm
+        working-directory: js
+        run: |
+          npm install -g npm@latest
+          npm publish --access public --provenance

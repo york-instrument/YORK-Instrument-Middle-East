@@ -102,7 +102,7 @@ The full table from −100 to +20 °C, with a two-way calculator, is on [yorkins
 
 - [How to calibrate a dew point sensor](https://www.yorkinstrument.ae/guides/dew-point-sensor-calibration/)
 - [Chilled mirror vs TDLAS vs metal-oxide moisture analyzers](https://www.yorkinstrument.ae/guides/chilled-mirror-vs-tdlas/)
-- [Single-file offline calculators](https://github.com/JasonLee9987/YORK-Instrument-Middle-East/tree/main/calculators)
+- [Single-file offline calculators](https://github.com/york-instrument/YORK-Instrument-Middle-East/tree/main/calculators)
 
 ## References
 
