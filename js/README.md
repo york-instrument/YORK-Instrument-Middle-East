@@ -7,7 +7,7 @@ Maintained by [YORK Instrument – Middle East](https://www.yorkinstrument.ae/),
 ## Install
 
 ```bash
-pip install york-dewpoint        # Python 3.8+
+pip install york-dewpoint        # Python 3.9+
 npm install york-dewpoint        # Node 18+ / browsers (ES module)
 ```
 

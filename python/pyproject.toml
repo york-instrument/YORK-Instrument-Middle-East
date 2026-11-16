@@ -8,7 +8,7 @@ version = "0.1.0"
 description = "Dew point, frost point, ppmV and ISO 8573-1 pressure dew point conversions (Sonntag 1990) for industrial gases and compressed air."
 readme = "README.md"
 license = { text = "MIT" }
-requires-python = ">=3.8"
+requires-python = ">=3.9"
 authors = [{ name = "YORK Instrument - Middle East", email = "dubai@yorkinstrument.com" }]
 keywords = ["dew point", "frost point", "ppmv", "moisture", "humidity", "compressed air", "ISO 8573-1", "pressure dew point", "hygrometer", "gas analysis"]
 classifiers = [
