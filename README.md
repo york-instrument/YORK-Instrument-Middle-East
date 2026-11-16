@@ -18,6 +18,18 @@ Maintained by [YORK Instrument – Middle East](https://www.yorkinstrument.ae/),
 | [Moisture and oxygen unit converter](calculators/moisture-oxygen-unit-converter.html) | ppmV, ppmW, mg/m³, mg/Sm³, lb/MMscf and dew point; %, ppm, ppb and partial pressure for oxygen | [Open online](https://www.yorkinstrument.ae/tools/moisture-oxygen-unit-converter/) |
 | [Analyzer selector](calculators/analyzer-selector.html) | Five questions to pick a moisture, oxygen or CO₂ analyzer type for an application | [Open online](https://www.yorkinstrument.ae/tools/analyzer-selector/) |
 
+## Libraries for your own code
+
+**[york-dewpoint](python/)** – the dew point equations behind these calculators as a small Python and JavaScript library (Sonntag 1990, optional Buck 1996 enhancement factor, ISO 8573-1 water class). No dependencies, unit-tested against the published tables.
+
+```python
+from york_dewpoint import dew_point_to_ppmv, convert_dew_point, ATM_BAR
+dew_point_to_ppmv(-40)              # 126.7 ppmV at 1 atm
+convert_dew_point(-40, 7 + ATM_BAR) # -57.0 °C: a -40 °C pressure dew point at 7 bar(g), expanded to 1 atm
+```
+
+Python: [`python/`](python/) · JavaScript: [`js/`](js/) · Method, reference tables and worked examples: [python/README.md](python/README.md)
+
 ## How to use
 
 Download any `.html` file from the `calculators` folder and open it in a browser. Nothing is installed and no data leaves your computer.

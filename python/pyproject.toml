@@ -1,0 +1,27 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "york-dewpoint"
+version = "0.1.0"
+description = "Dew point, frost point, ppmV and ISO 8573-1 pressure dew point conversions (Sonntag 1990) for industrial gases and compressed air."
+readme = "README.md"
+license = { text = "MIT" }
+requires-python = ">=3.8"
+authors = [{ name = "YORK Instrument - Middle East", email = "dubai@yorkinstrument.com" }]
+keywords = ["dew point", "frost point", "ppmv", "moisture", "humidity", "compressed air", "ISO 8573-1", "pressure dew point", "hygrometer", "gas analysis"]
+classifiers = [
+  "License :: OSI Approved :: MIT License",
+  "Programming Language :: Python :: 3",
+  "Intended Audience :: Science/Research",
+  "Topic :: Scientific/Engineering :: Physics",
+]
+
+[project.urls]
+Homepage = "https://www.yorkinstrument.ae/tools/dew-point-calculator/"
+Documentation = "https://www.yorkinstrument.ae/guides/dew-point-to-ppm/"
+Source = "https://github.com/JasonLee9987/YORK-Instrument-Middle-East"
+
+[tool.setuptools.packages.find]
+where = ["src"]
